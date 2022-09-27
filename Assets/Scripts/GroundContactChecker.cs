@@ -13,11 +13,6 @@ public class GroundContactChecker : MonoBehaviour
     bool collided = false;
     bool lastFrameCollided = false;
 
-    void Start()
-    {
-        
-    }
-
     void OnCollisionStay(Collision collision)
     {
         lastFrameCollided = true;

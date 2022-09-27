@@ -37,11 +37,6 @@ public class Follow : MonoBehaviour
 
     void LateUpdate()
     {
-        //float size = Mathf.Clamp(Cam.orthographicSize * (1 - Input.GetAxis("Mouse ScrollWheel")), 5, 10);
-        //Cam.orthographicSize = size;
-
-
-
         Vector3 offsetVec = Quaternion.Euler(0, camTransform.rotation.eulerAngles.y, 0) * Vector3.Normalize(Vector3.back*2 + Vector3.up) * offset;
         Vector3 targetPoint = transform.position + offsetVec;
 
