@@ -41,7 +41,9 @@ public class Follow : MonoBehaviour
 
     void LateUpdate()
     {
-        Vector3 offsetVec = Quaternion.Euler(0, camTransform.rotation.eulerAngles.y, 0) * Vector3.Normalize(Vector3.back*2 + Vector3.up) * offset;
+        Vector3 cameraOffsetDir = Vector3.Normalize(Vector3.back * 2 + Vector3.up);
+
+        Vector3 offsetVec = Quaternion.Euler(0, camTransform.rotation.eulerAngles.y, 0) * cameraOffsetDir * offset;
         Vector3 targetPoint = transform.position + offsetVec;
 
         Vector3 delta = camTransform.position - targetPoint;
